@@ -1,0 +1,72 @@
+---
+import Logo from "@/components/Logo.astro";
+---
+
+<footer class="footer">
+  <div class="block">
+    <div class="col col-1">
+      <Logo />
+
+      <p>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat
+      </p>
+      <div>social Links</div>
+    </div>
+    <div class="col">
+      <h3 class="label">Resources</h3>
+      <ul class="links">
+        <li><a href="#">Helps</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="label">Company</h3>
+      <ul class="links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="label">Join a Newsletter</h3>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>&copy; 2020 TanahAir Studio. All rights reserved.</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: grid;
+    gap: 6rem;
+    background-color: #f5faff;
+    padding: 6rem 12rem 3.2rem 12rem;
+  }
+  .block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+  }
+  .links {
+    display: grid;
+    align-content: center;
+    gap: 8px;
+  }
+  .col {
+    display: flex;
+    flex-flow: column;
+    gap: 1.6rem;
+  }
+
+  .copyright {
+    text-align: center;
+    color: var(--color-title);
+  }
+</style>

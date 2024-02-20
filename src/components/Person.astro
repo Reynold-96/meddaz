@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+
+const { img, name, position } = Astro.props;
+---
+
+<div class="person">
+  <div class="img-box">
+    <Image
+      src={img}
+      alt={name}
+      style={"height: 100%; width: 100%; object-fit: cover"}
+    />
+  </div>
+  <span class="name label">{name}</span>
+  <span class="position">{position}</span>
+</div>
+
+<style>
+  .person {
+    display: grid;
+    justify-items: center;
+  }
+  .img-box {
+    overflow: hidden;
+  }
+  .name {
+    color: var(--color-title);
+    margin-top: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .position {
+    font-weight: 800;
+  }
+</style>

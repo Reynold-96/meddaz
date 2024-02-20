@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.svg";
+---
+
+<div class="logo">
+  <div>
+    <Image src={logo} alt="logo" width={56} height={56} />
+  </div>
+  <span class="name">Maddez</span>
+</div>
+
+<style>
+  .logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .name {
+    color: var(--color-accent);
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+</style>

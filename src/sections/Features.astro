@@ -1,0 +1,72 @@
+---
+import FeatureCard from "../components/FeatureCard.astro";
+import icon from "@/assets/document.svg";
+
+const features = [
+  {
+    id: 1,
+    icon: icon,
+    title: "Analytical Dashboard",
+    caption:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+  },
+  {
+    id: 2,
+    icon: icon,
+    title: "Medical Appoinment",
+    caption:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+  },
+  {
+    id: 3,
+    icon: icon,
+    title: "Doctor Profile",
+    caption:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+  },
+  {
+    id: 4,
+    icon: icon,
+    title: "Chat with Doctors",
+    caption:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. ",
+  },
+];
+---
+
+<section class="feature-section section">
+  <h2 class="section-title">Platform Features</h2>
+  <p class="subtitle">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium, totam rem aperiam.
+  </p>
+  <div class="features">
+    {
+      features.map(({ id, icon, title, caption }) => (
+        <FeatureCard id={id} icon={icon} title={title} caption={caption} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .feature-section {
+    display: grid;
+    justify-items: center;
+  }
+
+  .features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    width: 60ch;
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+  }
+</style>

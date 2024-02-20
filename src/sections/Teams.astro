@@ -1,0 +1,68 @@
+---
+import img from "@/assets/person.png";
+import Person from "@/components/Person.astro";
+const teams = [
+  {
+    id: 1,
+    img: img,
+    name: "Jeane Andrea",
+    position: "CEO",
+  },
+  {
+    id: 2,
+    img: img,
+    name: "Aaron Bright",
+    position: "Founder",
+  },
+  {
+    id: 3,
+    img: img,
+    name: "Dianna Minn",
+    position: "CFO",
+  },
+  {
+    id: 4,
+    img: img,
+    name: "Alexandro",
+    position: "CTO",
+  },
+];
+---
+
+<section class="teams-section section">
+  <h2 class="section-title">Meet Our Team</h2>
+  <p class="subtitle">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium, totam rem aperiam.
+  </p>
+  <div class="teams">
+    {
+      teams.map(({ id, img, name, position }) => (
+        <Person id={id} img={img} name={name} position={position} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .teams-section {
+    display: grid;
+    justify-items: center;
+  }
+
+  .teams {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    width: 60ch;
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+  }
+</style>

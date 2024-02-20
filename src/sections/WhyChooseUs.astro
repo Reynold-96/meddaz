@@ -1,0 +1,67 @@
+---
+import Feature from "../components/Feature.astro";
+import dashboard from "@/assets/dashboard.svg";
+import lock from "@/assets/lock.svg";
+import web_asset from "@/assets/web_asset.svg";
+
+const features = [
+  {
+    id: 1,
+    icon: dashboard,
+    title: "Modern UI",
+    subtitle:
+      "Amet minim mollit non etca deserunt ullamco est sit etca aliqua dolor do amet sint etca aliqua dolor do amet.",
+  },
+  {
+    id: 2,
+    icon: lock,
+    title: "Secure System",
+    subtitle:
+      "Amet minim mollit non etca deserunt ullamco est sit etca aliqua dolor do amet sint etca aliqua dolor do amet.",
+  },
+  {
+    id: 3,
+    icon: web_asset,
+    title: "Web Based",
+    subtitle:
+      "Amet minim mollit non etca deserunt ullamco est sit etca aliqua dolor do amet sint etca aliqua dolor do amet.",
+  },
+];
+---
+
+<section class="why-choose-us-section section">
+  <h2 class="section-title">Why Choose Us</h2>
+  <p class="subtitle">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium, totam rem aperiam.
+  </p>
+  <div class="features">
+    {
+      features.map(({ id, icon, title, subtitle }) => (
+        <Feature id={id} icon={icon} title={title} subtitle={subtitle} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .why-choose-us-section {
+    display: grid;
+    justify-items: center;
+  }
+
+  .features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+
+  .subtitle {
+    text-align: center;
+    width: 60ch;
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+  }
+</style>

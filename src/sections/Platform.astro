@@ -1,0 +1,38 @@
+---
+import { YouTube } from "@astro-community/astro-embed-youtube";
+---
+
+<section class="platform section">
+  <div class="header">
+    <h2 class="section-title">Best medical platform since 2010</h2>
+    <a href="#" class="btn btn-filled btn-md">Read More</a>
+  </div>
+  <div class="container">
+    <YouTube class="player" id="gzkIgBHKk8E" />
+  </div>
+</section>
+
+<style>
+  .platform {
+    display: grid;
+    gap: 2.4rem;
+    justify-items: center;
+  }
+  lite-youtube {
+    max-width: 100% !important;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .section-title {
+    width: 20ch;
+  }
+</style>

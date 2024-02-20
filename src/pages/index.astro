@@ -6,7 +6,7 @@ import Platform from "@/sections/Platform.astro";
 import Blogs from "@/sections/Blogs.astro";
 import Teams from "@/sections/Teams.astro";
 import { Image } from "astro:assets";
-import logo from "@/assets/logo.svg";
+import hero from "@/assets/cover.jpg";
 ---
 
 <BaseLayout title="Home">
@@ -25,7 +25,11 @@ import logo from "@/assets/logo.svg";
       </div>
     </div>
     <div class="hero-img">
-      <Image src={logo} alt="hero-image" width={632} height={604} />
+      <Image
+        src={hero}
+        alt="hero-image"
+        style={"height: 100%; width: 100%; object-fit: cover"}
+      />
     </div>
   </header>
 
@@ -42,12 +46,14 @@ import logo from "@/assets/logo.svg";
     position: relative;
     padding: 6rem 0 12rem 12rem;
     padding-top: 6rem;
-    padding-bottom: 30.4rem;
+    padding-bottom: 12rem;
   }
   .hero-img {
+    width: 63.2rem;
+    height: 60.4rem;
     display: block;
     position: absolute;
-    top: 6rem;
+    top: 0rem;
     right: 0;
   }
   .headline {

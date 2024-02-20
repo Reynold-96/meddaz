@@ -20,6 +20,8 @@ import Logo from "@/components/Logo.astro";
     align-items: center;
     justify-content: space-between;
     padding: 1.6rem 12rem;
+    z-index: 999;
+    background-color: #fff;
   }
   .links {
     display: flex;
@@ -29,4 +31,26 @@ import Logo from "@/components/Logo.astro";
   .link {
     display: flex;
   }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 </style>
+
+<script>
+  window.onscroll = function () {
+    myFunction();
+  };
+  var navbar = document.querySelector("nav");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.scrollY > sticky) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
